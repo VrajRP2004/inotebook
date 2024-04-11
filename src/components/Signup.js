@@ -29,7 +29,7 @@ const Signup = () => {
     }
   return (
     <div className='container'>
-      <form>
+      <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
                     <input type="text" className="form-control" value={credentials.name} onChange={onChange} id="name"  required minLength={2} name="name" aria-describedby="emailHelp" />
@@ -47,7 +47,7 @@ const Signup = () => {
                     <input type="password" className="form-control" value={credentials.cpassword} onChange={onChange} name="cpassword" id="cpassword"  required minLength={2} />
                 </div>
 
-                <input onClick={handleSubmit} type="button" value={'Submit'} className="btn btn-primary"/>
+                <input type="button" value={'Submit'} className="btn btn-primary"/>
             </form>
     </div>
   )
